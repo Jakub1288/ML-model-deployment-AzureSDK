@@ -1,0 +1,32 @@
+new_instance_data = pd.DataFrame({
+    'Age': [25],
+    'BusinessTravel': ['Travel_Frequently'],
+    'Department': ['Sales'],
+    'DistanceFromHome': [10],
+    'Education': [1],
+    'EducationField': ['Life Sciences'],
+    'Gender': ['Male'],
+    'JobLevel': [1],
+    'JobRole': ['Healthcare Representative'],
+    'MaritalStatus': ['Single'],
+    'MonthlyIncome': [45222],
+    'NumCompaniesWorked': [1],
+    'Over18': ['Y'],
+    'PercentSalaryHike': [11],
+    'StockOptionLevel': [0],
+    'TotalWorkingYears': [4],
+    'TrainingTimesLastYear': [8],
+    'YearsAtCompany': [2],
+    'YearsSinceLastPromotion': [1],
+    'YearsWithCurrManager': [1]
+})
+
+
+
+new_instance_data = new_instance_data[X_train.columns]
+
+# Make predictions on the new instance
+predictions = best_knn.predict(new_instance_data)
+
+# Output the predictions
+print(predictions)
